@@ -1,0 +1,21 @@
+{
+  "name": "FadeLED",
+  "version": "1.0.0",
+  "keywords": "LED, FastLED, Fade",
+  "description": "A simple LED queued fader system.",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Sarah-C/M5Stack_Core2_FadeLED"
+  },
+  "authors":
+  [
+    {
+        "name": "SarahC",
+        "email": "sarah@untamed.zone",
+        "maintainer": true
+    }
+  ],
+  "frameworks": "arduino",
+  "platforms": ["esp32","M5stack-core-esp32","espressif8266"]
+}

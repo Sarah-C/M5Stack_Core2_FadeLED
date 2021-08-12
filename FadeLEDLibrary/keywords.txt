@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+fade	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+update	KEYWORD2
+brightness	KEYWORD2
+addFadeToQueue	KEYWORD2
+FadeQueue	KEYWORD2
+startRGB	KEYWORD2
+targetRGB	KEYWORD2
+currentRGB	KEYWORD2
+globalBrightFactor	KEYWORD2
+allQueuesEmpty	KEYWORD2
+queueEmpty	KEYWORD2
+useStartColor	KEYWORD2
+fadeTransitionSteps	KEYWORD2
+fadeCountdown	KEYWORD2
+fadeLEDs	KEYWORD2
