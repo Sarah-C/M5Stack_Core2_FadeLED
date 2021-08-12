@@ -6,7 +6,7 @@ int stage = 0;
 void setup() {
   M5.begin();
   randomSeed(analogRead(0));
-  fade.brightness(0.01);
+  fade.brightness(1);
   xTaskCreatePinnedToCore(updateDisplay, "Update display.", 1000, NULL, 1, NULL, 1);
 }
 
