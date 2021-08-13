@@ -37,10 +37,12 @@ If fadeCountdown + fadeCountup for each pixel are the same for al the pixels inv
 
 For instance, all the leds will light up one following the next, and then all fade out at the same time, due to fadeCountup and fadeCountdown all totalling the same number of cycles:
 
-      for (int led = 0; led < 10; led++) {
-        addFade(255, 255, 255,   i * 10,    10 - (i * 10),    10,  led);
-        addFade(0, 0, 0,         0,                    25,    10,   i);
+     for (int led = 0; led < 10; led++) {
+        uint8_t pause = led;
+        addFade(255, 255, 255,  pause * 10,    10 - (pause * 10), 10, led);
+        addFade(0, 0, 0,                 0,                   25, 10, led);
       }
+     
 
 
 
