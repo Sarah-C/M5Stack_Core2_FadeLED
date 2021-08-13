@@ -13,6 +13,7 @@ struct FadeQueue {
   bool useStartColor;
   uint16_t fadeTransitionSteps;
   uint16_t fadeCountdown;
+  uint16_t fadeCountup;
 };
 
 struct FadeLEDs {
@@ -24,6 +25,7 @@ struct FadeLEDs {
   uint8_t freeQueueElements;
   uint16_t fadeStep;
   uint16_t fadeCountdown;
+  uint16_t fadeCountup;
   uint16_t fadeTransitionSteps;
   bool fadeCompleted;
   FadeQueue fadeQueue[QUEUE_LENGTH];
@@ -32,10 +34,12 @@ struct FadeLEDs {
 class FadeLED {
   public:
     FadeLED();
-	CRGB leds[NUM_LEDS];
-	FadeLEDs fadeLEDs[NUM_LEDS];
+    CRGB leds[NUM_LEDS];
+    FadeLEDs fadeLEDs[NUM_LEDS];
     float globalBrightFactor;
     void update(void);
+    void clearLed(uint8_t led);
+    void clearLeds(void);
     void brightness(float brightness);
     void addFadeToQueue(FadeQueue d, uint8_t led) ;
     bool allQueuesEmpty();
@@ -46,6 +50,7 @@ class FadeLED {
     void updateLEDFade(uint8_t number);
     void setPhysicalLED(uint8_t number);
     void updateLED(uint8_t number);
+    void initialiseLED(uint8_t led);
     void initialiseLEDs(void);
 
 };
