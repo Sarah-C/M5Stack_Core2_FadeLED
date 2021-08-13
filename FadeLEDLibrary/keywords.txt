@@ -14,7 +14,7 @@ fade	KEYWORD1
 update	KEYWORD2
 clearLED	KEYWORD2
 clearLEDs	KEYWORD2
-brightness	KEYWORD2
+setBrightness	KEYWORD2
 addFadeToQueue	KEYWORD2
 FadeQueue	KEYWORD2
 startRGB	KEYWORD2
