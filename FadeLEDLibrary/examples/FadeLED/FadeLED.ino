@@ -132,6 +132,8 @@ void maybeAddNewFadyStage() {
 
 // Task that runs independently showing on the M5Stack Core2 screen what the LED's are displaying.
 void updateDisplayTask(void * parameter) {
+  // Writing on the main thread when a task's writing to the LCD is a really bad idea, (multiple LCD writes concurrently)
+  // So all the text updates have been moved from the maybeAddNewFadyStage() function to here.
   M5.Lcd.setTextDatum(MC_DATUM); // Middle center align
   M5.Lcd.setTextColor(TFT_WHITE);
   // Configure with this.
