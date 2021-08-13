@@ -2,12 +2,12 @@
 #include "FadeLED.h"
 
 uint8_t stage = 0;
-uint8_t oldStage = 1;
+uint8_t oldStage = 1; // For knowing when to draw the flash description on the screen.
 
 void setup() {
   M5.begin();
   randomSeed(analogRead(0));
-  fade.brightness(1);
+  fade.setBrightness(200);
   xTaskCreatePinnedToCore(updateDisplayTask, "Update display.", 1000, NULL, 1, NULL, 1);
 }
 
