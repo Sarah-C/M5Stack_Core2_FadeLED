@@ -9,7 +9,7 @@ Just drop it in your documents/Arduino/library folder, and then check out the ex
     CRGB startRGB;
     CRGB targetRGB;
     bool useStartColor;
-    uint16_t fadeTransitionSteps ;
+    uint16_t fadeTransitionSteps;
     uint16_t fadeCountdown;
     uint16_t fadeCountup;
 
