@@ -13,11 +13,11 @@ Just drop it in your documents/Arduino/library folder, and then check out the ex
     uint16_t fadeCountdown;
     uint16_t fadeCountup;
 
-    // For example:
+    // For example, fade to red, from whatever color the LED is now, without a start pause or end pause, fade takes 50 cycles:
     FadeQueue fqItem;
     uint8_t led = 0;
     fqItem.startRGB = CRGB(0, 0, 0);
-    fqItem.targetRGB = CRGB(0, 0, 0);
+    fqItem.targetRGB = CRGB(255, 0, 0);
     fqItem.useStartColor = false;
     fqItem.fadeTransitionSteps = 50;
     fqItem.fadeCountdown = 0;
