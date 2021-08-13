@@ -5,7 +5,6 @@ CRGB leds[NUM_LEDS];
 FadeLEDs fadeLEDs[NUM_LEDS];
 
 FadeLED::FadeLED() {
-  globalBrightFactor = 1.0;
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);  // GRB ordering is assumed
   this->initialiseLEDs();
 }
@@ -43,9 +42,9 @@ void FadeLED::updateLEDFade(uint8_t number) {
 }
 
 void FadeLED::setPhysicalLED(uint8_t number) {
-  float r = fadeLEDs[number].currentRGB.r * globalBrightFactor;
-  float g = fadeLEDs[number].currentRGB.g * globalBrightFactor;
-  float b = fadeLEDs[number].currentRGB.b * globalBrightFactor;
+  float r = fadeLEDs[number].currentRGB.r;
+  float g = fadeLEDs[number].currentRGB.g;
+  float b = fadeLEDs[number].currentRGB.b;
   if (r < 0) r = 0;
   if (r > 255) r = 255;
   if (g < 0) g = 0;
@@ -82,8 +81,8 @@ void FadeLED::update(void) {
   FastLED.show();
 }
 
-void FadeLED::brightness(float brightness) {
-  globalBrightFactor = brightness;
+void FadeLED::setBrightness(uint8_t brightness) {
+  FastLED.setBrightness(brightness);
 }
 
 void FadeLED::initialiseLED(uint8_t led) {

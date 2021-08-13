@@ -36,11 +36,10 @@ class FadeLED {
     FadeLED();
     CRGB leds[NUM_LEDS];
     FadeLEDs fadeLEDs[NUM_LEDS];
-    float globalBrightFactor;
     void update(void);
     void clearLed(uint8_t led);
     void clearLeds(void);
-    void brightness(float brightness);
+    void setBrightness(uint8_t brightness);
     void addFadeToQueue(FadeQueue d, uint8_t led) ;
     bool allQueuesEmpty();
     bool queueEmpty(uint8_t led);
