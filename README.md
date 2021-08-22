@@ -1,4 +1,4 @@
-# M5Stack_Core2_FadeLED
+# M5Stack Core2: FadeLED
 https://youtu.be/tLgJLZ2Suhc
 
 A simple queued LED fader library for the M5Stack - Core2, Arduino.
