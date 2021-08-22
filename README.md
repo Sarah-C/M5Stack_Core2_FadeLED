@@ -6,6 +6,9 @@ Example: https://youtu.be/tLgJLZ2Suhc
 
 A simple queued LED fader library for the M5Stack - Core2, Arduino.
 
+Similar to https://github.com/Sarah-C/Arduino_GFadeLED/ , but hides all the FastLED code and makes setup a lot simpler, due to being designed for the M5Go2 bottom. 
+( https://shop.m5stack.com/products/m5go-battery-bottom2-for-core2-only )
+
 Just drop it in your documents/Arduino/library folder, and then check out the example sketch!
 
 (You'll need the FastLED library too - get it from the Arduino library manager in the tools drop-down menu.)
